@@ -1,0 +1,42 @@
+main {
+  margin: 10px;
+  width: 90%;
+  height: 100vh;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+.card-1 {
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-2 {
+  margin: 5px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.card-2 > h1 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.card-2 > p {
+  background-color: lightgray;
+  margin: 10px;
+}
+
+.card-3 {
+  width: 13%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
