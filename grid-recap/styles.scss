@@ -1,0 +1,35 @@
+main {
+  border: 2px solid black;
+  width: 80%;
+  height: 600px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+
+  div {
+    // margin: 10px;
+    background-color: aqua;
+  }
+}
+
+// media queries
+//make it responsive to different screen sizes/display types
+
+// will only be applied when screen size is < 750 px
+@media screen and (max-width: 750px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+// media query that inverts the styling at 500px
+// background white -> black
+// text black -> white
+
+@media screen and (max-width: 500px) {
+  main {
+  div { background-color: black;
+  color: white;}
+  }
+}
