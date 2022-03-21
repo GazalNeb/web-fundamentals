@@ -4,22 +4,24 @@ main {
   height: 600px;
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "nav nav nav nav nav" "section section div div div" "footer footer footer footer footer";
   gap: 10px;
 }
+main > * {
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main nav {
+  grid-area: nav;
+}
+main section {
+  grid-area: section;
+}
 main div {
-  background-color: aqua;
+  grid-area: div;
 }
-
-@media screen and (max-width: 750px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 500px) {
-  main div {
-    background-color: black;
-    color: white;
-  }
+main footer {
+  grid-area: footer;
 }

@@ -1,35 +1,76 @@
+// main {
+//   border: 2px solid black;
+//   width: 80%;
+//   height: 600px;
+//   margin: 20px auto;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+//   gap: 10px;
+
+//   div {
+//     // margin: 10px;
+//     background-color: aqua;
+//   }
+// }
+
+// // media queries
+// //make it responsive to different screen sizes/display types
+
+// // will only be applied when screen size is < 750 px
+// @media screen and (max-width: 750px) {
+//   main {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+// // media query that inverts the styling at 500px
+// // background white -> black
+// // text black -> white
+
+// @media screen and (max-width: 500px) {
+//   main {
+//   div { background-color: black;
+//   color: white;}
+//   }
+// }
+
+
 main {
-  border: 2px solid black;
-  width: 80%;
-  height: 600px;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
+    border: 2px solid black;
+    width: 80%;
+    height: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "section section div div div"
+    "footer footer footer footer footer"
+    ;
 
-  div {
-    // margin: 10px;
-    background-color: aqua;
-  }
-}
+    gap: 10px;
 
-// media queries
-//make it responsive to different screen sizes/display types
+  // > * {} is for targeting immediate children
+    > * {
+      background-color: crimson;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-// will only be applied when screen size is < 750 px
-@media screen and (max-width: 750px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-// media query that inverts the styling at 500px
-// background white -> black
-// text black -> white
-
-@media screen and (max-width: 500px) {
-  main {
-  div { background-color: black;
-  color: white;}
-  }
+    nav {
+      grid-area: nav;
+    }
+    
+    section {
+      grid-area: section;
+    }
+    
+    div {
+      grid-area: div;
+    }
+    
+    footer {
+      grid-area: footer;
+    }
+    
 }
