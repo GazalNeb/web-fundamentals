@@ -68,6 +68,15 @@ section {
 
 #top-2 {
   width: 22%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#picture-people {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 #top-3 {
